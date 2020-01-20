@@ -47,13 +47,23 @@
 }
 
 @keyframes float {
-  0% {box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-      0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -18px rgba(0, 0, 0, 0.025);}
-  50% {box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -18px rgba(0, 0, 0, 0.025);}
-  100% {box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -18px rgba(0, 0, 0, 0.025);}
+  0% {
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+  50% {
+    box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+  100% {
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
 }
+
 .chat__write {
   margin: 0 auto;
   bottom : 0px;
@@ -73,7 +83,7 @@
   transform : translateY(-100px);
   border-radius: 40px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -18px rgba(0, 0, 0, 0.025);
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   animation: float 3s linear infinite forwards;
 }
 
@@ -93,9 +103,9 @@
 .chat__write-column:nth-child(2) {
   width: 80%;
 }
-.chat__write-column input {
+/* .chat__write-column input {
   
-}
+} */
 
 .chat-screen .chat__messages {
   border-top: 1px solid #f7f7f7;
@@ -156,8 +166,10 @@
 
 .message .message__bubble {
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
-    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  box-shadow: box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+  rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+    
   padding: 10px 20px;
   border-radius: 40px;
   color:white;
@@ -168,10 +180,10 @@
 
 .incoming-message .message__author {
   margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   display: block;
   font-weight: 600;
-  font-size: 12px;ß
+  font-size: 12px;
 }
 
 .incoming-message .message__bubble {
@@ -197,7 +209,7 @@
 }
 
 .incoming-message {
-  animation: incomingAnimation 0.5s ease-out forwards;
+  animation: incomingAnim 0.5s ease-out forwards;
 }
 @keyframes sentAnimation {
   from {
@@ -212,5 +224,5 @@
 }
 
 .sent-message {
-  animation:setAnimation 0.5s ease-out forwards;
+  animation:sentAnimation 0.5s ease-out forwards;
 }
