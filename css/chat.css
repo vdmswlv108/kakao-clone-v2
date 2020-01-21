@@ -18,7 +18,7 @@
 }
 
 .chat-screen {
-  background-image: url(../../imges/chatBg.png);
+  background-image: url(../images/chatBg.png);
   min-height: 100vh;
 }
 
